@@ -1,0 +1,3 @@
+const CardToolBar=({mainTitle,otherTitle})=>{
+    
+}
