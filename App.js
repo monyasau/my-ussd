@@ -1,7 +1,5 @@
 import { StatusBar, setStatusBarStyle } from "expo-status-bar";
 import { Text, ScrollView, View, TouchableOpacity,Linking } from "react-native";
-import Card from "./components/Card";
-import CardToolBar from "./components/CardToolBar";
 import { Ionicons } from "@expo/vector-icons";
 import { useState } from "react";
 
