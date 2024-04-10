@@ -10,18 +10,13 @@ import { Ionicons } from "@expo/vector-icons";
 import { useState } from "react";
 import BottomNavigation from "./components/BottomNavigation";
 import AboutModal from "./components/AboutModal";
-import { AirtimeCodes } from "./lib/ussdCodes";
+import { AirtimeCodes, DataCodes, OtherCodes } from "./lib/ussdCodes";
 import ServicesGroup from "./components/ServicesGroup";
 
 export default function App() {
   const [aboutModalOpen, setAboutModalOpen] = useState(false);
   const switchAboutModal = () => setAboutModalOpen(!aboutModalOpen);
 
-  const airtimeInfos = [
-    { id: 1, name: "Check account balance", code: "310" },
-    { id: 2, name: "Borrow airtime", code: "303" },
-    { id: 3, name: "Recharge airtime", code: "311" },
-  ];
   const dataInfos = [
     { id: 1, name: "Check data balance", code: "323" },
     { id: 2, name: "Share data", code: "321" },
@@ -50,8 +45,8 @@ export default function App() {
 
         <ScrollView className="py-5">
           <ServicesGroup title="Airtime Services" data={AirtimeCodes} />
-          <ServicesGroup title="Data Services" data={AirtimeCodes} />
-          <ServicesGroup title="Other Services" data={AirtimeCodes} />
+          <ServicesGroup title="Data Services" data={DataCodes} />
+          <ServicesGroup title="Other Services" data={OtherCodes} />
         </ScrollView>
 
         {aboutModalOpen && (
