@@ -17,16 +17,6 @@ export default function App() {
   const [aboutModalOpen, setAboutModalOpen] = useState(false);
   const switchAboutModal = () => setAboutModalOpen(!aboutModalOpen);
 
-  const dataInfos = [
-    { id: 1, name: "Check data balance", code: "323" },
-    { id: 2, name: "Share data", code: "321" },
-    { id: 3, name: "Buy data", code: "312" },
-    // { id: 4, name: "Special data bundle(MTN)", code: "121" },
-    // { id: 8, name: "Night data plan(MTN)", code: "406*3" },
-    // { id: 5, name: "Special data bundle(Glo)", code: "301" },
-    // { id: 6, name: "Special data bundle(Airtel)", code: "121" },
-    // { id: 7, name: "Special data bundle(9-Mobile)", code: "121" },
-  ];
   const otherInfos = [
     { id: 1, name: "Customer care service", code: 300 },
     { id: 2, name: "Link you NIN", code: "996" },
