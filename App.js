@@ -51,30 +51,7 @@ export default function App() {
         <ScrollView className="py-5">
           <ServicesGroup title="Airtime Services" data={AirtimeCodes} />
           <ServicesGroup title="Data Services" data={AirtimeCodes} />
-
-          <View className="flex-grow py-5 bg-green-50">
-            <View
-              aria-label="Airtime services"
-              className="mx-5 bg-green-100 rounded-xl"
-            >
-              <Text className="mx-[10px] text-base">Airtime services</Text>
-              <MainApp groupData={airtimeInfos} />
-            </View>
-
-            <Line />
-            <View className="mx-5 bg-green-100" aria-label="Data services">
-              <Text className="text-base mx-[10px]">Internet/Data Service</Text>
-              <MainApp groupData={dataInfos} />
-            </View>
-            <Line />
-            <View
-              className="mx-5 bg-green-100 rounded-xl"
-              aria-label="Other services"
-            >
-              <Text className="mx-[10px] text-base">Other services</Text>
-              <MainApp groupData={otherInfos} />
-            </View>
-          </View>
+          <ServicesGroup title="Other Services" data={AirtimeCodes} />
         </ScrollView>
 
         {aboutModalOpen && (
