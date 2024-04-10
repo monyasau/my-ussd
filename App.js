@@ -77,23 +77,3 @@ export function MainApp({ groupData }) {
     </ScrollView>
   );
 }
-
-export function Box({ item }) {
-  const loadUssd = () => {
-    let ussdCode = `*${item.code}#`;
-    Linking.openURL(`tel:${ussdCode}`);
-  };
-  return (
-    <TouchableOpacity onPress={loadUssd}>
-      <View
-        key={item}
-        className="w-[160px] bg-white rounded-xl p-3 h-[130px] m-[10]"
-      >
-        <Text className=" mx-auto text-center font-semibold">{item.name}</Text>
-        <Text className="text-base mx-auto my-auto">
-          {"*" + item.code + "#"}
-        </Text>
-      </View>
-    </TouchableOpacity>
-  );
-}
