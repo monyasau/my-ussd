@@ -65,15 +65,5 @@ export default function App() {
       <StatusBar style="light" backgroundColor="#166534" />
     </>
   );
-}
-export function MainApp({ groupData }) {
-  return (
-    <ScrollView horizontal>
-      <View className="flex-row ">
-        {groupData.map((item) => (
-          <Box key={item.id} item={item} />
-        ))}
-      </View>
-    </ScrollView>
-  );
+
 }
