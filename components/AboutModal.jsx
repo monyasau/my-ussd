@@ -10,14 +10,10 @@ export default function AboutModal({ active, switchAboutModal }) {
     <Modal transparent>
       <View className="h-full bg-black/50 p-4">
         <View className="bg-white w-[300px] p-4 mx-auto my-auto justify-between rounded-xl border-2">
-          {/* <View className="flex-row items-center justify-between">
-            <Text className="text-xl font-medium">About</Text>
-            <TouchableOpacity onPress={() => switchAboutModal()}>
-              <Ionicons name="close" size={28} />
-            </TouchableOpacity>
-          </View> */}
-
-          <TouchableOpacity onPress={() => switchAboutModal()} className="border border-white rounded-full bg-red-100 w-8 h-8 absolute right-0 -top-10 justify-center items-center">
+          <TouchableOpacity
+            onPress={() => switchAboutModal()}
+            className="border border-white rounded-full bg-red-100 w-8 h-8 absolute right-0 -top-10 justify-center items-center"
+          >
             <Ionicons name="close" size={20} />
           </TouchableOpacity>
 
