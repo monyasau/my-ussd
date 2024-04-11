@@ -11,5 +11,3 @@ module.exports = {
   },
   plugins: [],
 };
-
-// + content: ["./App.{js,jsx,ts,tsx}", "./<custom directory>/**/*.{js,jsx,ts,tsx}"],
