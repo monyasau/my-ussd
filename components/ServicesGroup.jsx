@@ -27,6 +27,7 @@ export default function ServicesGroup({ title, data, setRechargeModal, setShareM
               onPress={() =>
                {
                 setShareModal(true)
+                setShareType(item.shareType)
                }
               }
             >
