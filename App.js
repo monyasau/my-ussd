@@ -55,7 +55,7 @@ export default function App() {
         )}
         {shareModalOpen && (
           <ShareModal
-            switchShareModal={switchShareModal} action={shareModalAction}
+            switchShareModal={switchShareModal} shareType={shareModalAction}
           />
         )}
 
