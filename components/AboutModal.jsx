@@ -1,5 +1,6 @@
-import { Text, View, TouchableOpacity, Modal, Pressable } from "react-native";
+import { Text, View, TouchableOpacity, Modal, Pressable, Linking } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
+import { FontAwesome } from "@expo/vector-icons";
 
 export default function AboutModal({ active, switchAboutModal }) {
   if (!active) {
@@ -18,14 +19,20 @@ export default function AboutModal({ active, switchAboutModal }) {
           </TouchableOpacity>
 
           <Text className="text-center text-lg font-bold pb-5">MyUSSD</Text>
-          <Text className="text-center text-sm py-5">
+          <View className="text-center text-sm py-5 justify-center flex-row">
+            <Text className="">
+
             Made with &hearts; by{" "}
-            <Text className="font-medium">Olajide Olanrewaju</Text>
-          </Text>
+            </Text>
+            <TouchableOpacity className=" "><Text className="text-blue-700 font-semibold " onPress={()=>{Linking.openURL("https://monyasau.netlify.app")}}>Olajide Olanrewaju</Text></TouchableOpacity>
+          </View>
           <Text className="text-center text-xs">Version 1.0.0</Text>
           <Text className="text-center text-sm pt-2">
-            Copyright &copy; 2024
+            Copyright &copy; 2024 
           </Text>
+          <View>
+          <TouchableOpacity className=" "  onPress={()=>{Linking.openURL("https://wa.me/+2349133442800/?text=Hey%20there%20👋%2C%20I'm%20messaging%20from%20one%20of%20your%20apps(MyUssd).")}}><FontAwesome name="whatsapp" size={26}/></TouchableOpacity>
+          </View>
         </View>
       </View>
     </Modal>
