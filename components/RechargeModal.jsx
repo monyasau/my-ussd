@@ -8,7 +8,7 @@ const RechargeModal=({switchRechargeModal})=> {
     return (
         <Modal transparent >
             <View className="w-full h-full bg-black/25 justify-center items-center">
-            <View className="w-[300px]  bg-white p-8 rounded-lg ">
+            <View className="w-[300px]  bg-white p-6  rounded-lg ">
                 <View className="flex-row items-center justify-between">
 
                 <Text className="text-center text-bold text-lg">Input your voucher pin</Text>
