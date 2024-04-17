@@ -1,7 +1,7 @@
 import { Text, View, TouchableOpacity, Linking } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 
-export default function ServicesGroup({ title, data, setRechargeModal, setShareModal }) {
+export default function ServicesGroup({ title, data, setRechargeModal, setShareType, setShareModal }) {
   return (
     <>
       <Text className="text-lg font-medium px-4">{title}</Text>
@@ -26,8 +26,11 @@ export default function ServicesGroup({ title, data, setRechargeModal, setShareM
               className="w-1/2 p-2"
               onPress={() =>
                {
-                setShareModal(true)
-                setShareType(item.shareType)
+                (item.shareType)?
+                setShareModal(true)|setShareType(item.shareType)
+                // setShareModal(true); setShareType(item.shareType)
+                :
+                setRechargeModal(true)
                }
               }
             >
