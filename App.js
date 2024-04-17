@@ -13,12 +13,13 @@ import RechargeModal from "./components/RechargeModal";
 import ShareModal from "./components/ShareModal";
 
 export default function App() {
-  const [aboutModalOpen, setAboutModalOpen] = useState(false);
+  const [aboutModalOpen, setAboutModalOpen] = useState(true);
   const [rechargeModalOpen, setRechargeModalOpen] = useState(false);
   const [shareModalOpen, setShareModalOpen] = useState(false);
   const switchShareModal = () => setShareModalOpen(!shareModalOpen);
   const switchAboutModal = () => setAboutModalOpen(!aboutModalOpen);
   const switchRechargeModal = () => setRechargeModalOpen(!rechargeModalOpen);
+  const [shareType,setShareType] = useState("");
 
   const otherInfos = [
     { id: 1, name: "Customer care service", code: 300 },
@@ -37,8 +38,8 @@ export default function App() {
         </View>
 
         <ScrollView className="py-5">
-          <ServicesGroup title="Airtime Services" data={AirtimeCodes} setRechargeModal={setRechargeModalOpen} setShareModal={setShareModalOpen} />
-          <ServicesGroup title="Data Services" data={DataCodes} />
+          <ServicesGroup title="Airtime Services" data={AirtimeCodes} setRechargeModal={setRechargeModalOpen} setShareType={setShareType} setShareModal={setShareModalOpen} />
+          <ServicesGroup title="Data Services" data={DataCodes}  setShareType={setShareType} setShareModal={setShareModalOpen}/>
           <ServicesGroup title="Other Services" data={OtherCodes} />
         </ScrollView>
 
@@ -55,7 +56,7 @@ export default function App() {
         )}
         {shareModalOpen && (
           <ShareModal
-            switchShareModal={switchShareModal} shareType={shareModalAction}
+            switchShareModal={switchShareModal} shareType={shareType}
           />
         )}
 
