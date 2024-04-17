@@ -1,6 +1,5 @@
 import { Text, View, TouchableOpacity, Modal, Pressable, Linking } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
-import { FontAwesome } from "@expo/vector-icons";
 
 export default function AboutModal({ active, switchAboutModal }) {
   if (!active) {
@@ -31,7 +30,11 @@ export default function AboutModal({ active, switchAboutModal }) {
             Copyright &copy; 2024 
           </Text>
           <View>
-          <TouchableOpacity className=" "  onPress={()=>{Linking.openURL("https://wa.me/+2349133442800/?text=Hey%20there%20👋%2C%20I'm%20messaging%20from%20one%20of%20your%20apps(MyUssd).")}}><FontAwesome name="whatsapp" size={26}/></TouchableOpacity>
+            <View className="flex-row mx-auto">
+
+          <TouchableOpacity className="mx-10 my-2"  onPress={()=>{Linking.openURL("https://wa.me/+2349133442800/?text=Hey%20there%20👋%2C%20I'm%20messaging%20from%20one%20of%20your%20apps(MyUssd).")}}><Ionicons name="logo-whatsapp" size={26}/></TouchableOpacity>
+          <TouchableOpacity className="mx-10 my-2"  onPress={()=>{Linking.openURL("mailto:someone@example.com")}}><Ionicons name="mail" size={26}/></TouchableOpacity>
+            </View>
           </View>
         </View>
       </View>
