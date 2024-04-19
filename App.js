@@ -13,7 +13,7 @@ import RechargeModal from "./components/RechargeModal";
 import ShareModal from "./components/ShareModal";
 
 export default function App() {
-  const [aboutModalOpen, setAboutModalOpen] = useState(true);
+  const [aboutModalOpen, setAboutModalOpen] = useState(false);
   const [rechargeModalOpen, setRechargeModalOpen] = useState(false);
   const [shareModalOpen, setShareModalOpen] = useState(false);
   const switchShareModal = () => setShareModalOpen(!shareModalOpen);
