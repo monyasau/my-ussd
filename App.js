@@ -1,4 +1,4 @@
-import { StatusBar, setStatusBarStyle } from "expo-status-bar";
+import { StatusBar } from "expo-status-bar";
 import {
   Text,
   ScrollView,
@@ -21,11 +21,6 @@ export default function App() {
   const switchRechargeModal = () => setRechargeModalOpen(!rechargeModalOpen);
   const [shareType,setShareType] = useState("");
 
-  const otherInfos = [
-    { id: 1, name: "Customer care service", code: 300 },
-    { id: 2, name: "Link you NIN", code: "996" },
-    { id: 3, name: "Value added services", code: "305" },
-  ];
 
   return (
     <>
