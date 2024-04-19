@@ -1,10 +1,6 @@
 import { StatusBar } from "expo-status-bar";
-import {
-  Text,
-  ScrollView,
-  View,
-} from "react-native";
-import { useState } from "react";
+import {Text,ScrollView,View,} from "react-native";
+import { useState, useEffect } from "react";
 import BottomNavigation from "./components/BottomNavigation";
 import AboutModal from "./components/AboutModal";
 import { AirtimeCodes, DataCodes, OtherCodes } from "./lib/ussdCodes";
