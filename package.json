@@ -10,8 +10,13 @@
   },
   "dependencies": {
     "expo": "~50.0.14",
+    "expo-application": "~5.8.4",
+    "expo-device": "~5.9.4",
+    "expo-file-system": "~16.0.9",
+    "expo-localization": "~14.8.4",
     "expo-status-bar": "~1.11.1",
     "nativewind": "^2.0.11",
+    "posthog-react-native": "^3.1.0",
     "react": "18.2.0",
     "react-native": "0.73.6"
   },
