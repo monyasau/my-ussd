@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "MyUssdNG",
-    "slug": "MyUssdNG",
+    "slug": "myussdng",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -21,18 +21,20 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.monyasau.myussdng"
     },
     "web": {
       "favicon": "./assets/favicon.png"
     },
     "extra": {
       "eas": {
-        "projectId": "353276e5-9bc3-4a0c-94b8-8f29291a0766"
+        "projectId": "56e25246-62db-4d23-bd2c-690b2345f038"
       }
     },
     "plugins": [
       "expo-localization"
-    ]
+    ],
+    "owner": "monyasau"
   }
 }
