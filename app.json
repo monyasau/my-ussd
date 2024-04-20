@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "my-ussd",
-    "slug": "my-ussd",
+    "name": "MyUssdNG",
+    "slug": "MyUssdNG",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -21,8 +21,7 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      },
-      "package": "com.monyasau.myussd"
+      }
     },
     "web": {
       "favicon": "./assets/favicon.png"
@@ -32,8 +31,5 @@
         "projectId": "353276e5-9bc3-4a0c-94b8-8f29291a0766"
       }
     },
-    "plugins": [
-      "expo-localization"
-    ]
   }
 }
