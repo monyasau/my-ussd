@@ -1,5 +1,6 @@
 import { Text, View, TouchableOpacity, Modal, Pressable, Linking } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
+import { posthog } from "./Posthog";
 
 export default function AboutModal({ active, switchAboutModal }) {
   if (!active) {
@@ -23,7 +24,7 @@ export default function AboutModal({ active, switchAboutModal }) {
 
             Made with &hearts; by{" "}
             </Text>
-            <TouchableOpacity className=" "><Text className="text-blue-700 font-semibold " onPress={()=>{Linking.openURL("https://monyasau.netlify.app")}}>Olajide Olanrewaju</Text></TouchableOpacity>
+            <TouchableOpacity className=" "><Text className="text-blue-700 font-semibold " onPress={()=>{Linking.openURL("https://monyasau.netlify.app");posthog.capture('Portfolio Clicked')}}>Olajide Olanrewaju</Text></TouchableOpacity>
           </View>
           <Text className="text-center text-xs">Version 1.0.0</Text>
           <Text className="text-center text-sm pt-2">
