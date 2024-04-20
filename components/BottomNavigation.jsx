@@ -1,7 +1,7 @@
 import { Text, View, TouchableOpacity } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 
-export default function BottomNavigation({ active, switchAboutModal }) {
+export default function BottomNavigation({ active, switchAboutModal, posthog }) {
   const items = [
     {
       title: "Home",
@@ -11,7 +11,9 @@ export default function BottomNavigation({ active, switchAboutModal }) {
     {
       title: "Search",
       icon: "search-outline",
-      action: () => {},
+      action: () => {
+        posthog.capture('Search clicked')
+      },
     },
     {
       title: "About",
