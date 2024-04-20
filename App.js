@@ -7,16 +7,19 @@ import { AirtimeCodes, DataCodes, OtherCodes } from "./lib/ussdCodes";
 import ServicesGroup from "./components/ServicesGroup";
 import RechargeModal from "./components/RechargeModal";
 import ShareModal from "./components/ShareModal";
+import {posthog} from "./components/Posthog"
 
 export default function App() {
   const [aboutModalOpen, setAboutModalOpen] = useState(false);
   const [rechargeModalOpen, setRechargeModalOpen] = useState(false);
   const [shareModalOpen, setShareModalOpen] = useState(false);
   const switchShareModal = () => setShareModalOpen(!shareModalOpen);
-  const switchAboutModal = () => setAboutModalOpen(!aboutModalOpen);
-  const switchRechargeModal = () => setRechargeModalOpen(!rechargeModalOpen);
+  const switchAboutModal = () => {setAboutModalOpen(!aboutModalOpen);posthog.capture('About toggled')}
+  const switchRechargeModal = () => setRechargeModalOpen(!rechargeModalOpen)
   const [shareType,setShareType] = useState("");
-
+  useEffect( () => {
+    async ()=>posthog.capture('App loaded')
+}, [])
 
   return (
     <>
@@ -53,7 +56,7 @@ export default function App() {
 
 
 
-        <BottomNavigation active={0} switchAboutModal={switchAboutModal} />
+        <BottomNavigation active={0} posthog={posthog} switchAboutModal={switchAboutModal} />
       </View>
       <StatusBar style="light" backgroundColor="#166534" />
     </>
